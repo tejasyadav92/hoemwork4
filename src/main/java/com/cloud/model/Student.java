@@ -1,13 +1,16 @@
 package com.cloud.model;
 
 
+
 import javax.persistence.Entity;
 import javax.persistence.Table;
+import javax.persistence.Id;
+
 
 @Entity
 @Table(name="student", schema = "public")
 public class Student {
-
+    @Id
     String name;
     String email;
 
