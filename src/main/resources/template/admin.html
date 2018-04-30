@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html layout:decorator="layout/layout" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.w3.org/1999/xhtml">
+<body>
+<th:block layout:fragment="content">
+    <div class="container mt-5">
+        <div class="row">
+
+            <div class="col-md-8 col-sm-8 mt-5">
+                <div class="card">
+                    <div class="card-header">Student List</div>
+                    <div class="card-body">
+                        <table class="table table-striped">
+                            <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Email</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr th:each="student : ${student}">
+                                <td th:text="${student.getName()}">Name</td>
+                                <td th:text="${student.getEmail()}">Email</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</th:block>
+</body>
+</html>

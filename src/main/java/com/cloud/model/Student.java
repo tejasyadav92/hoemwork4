@@ -1,8 +1,15 @@
 package com.cloud.model;
 
-public class student {
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="student", schema = "public")
+public class Student {
 
     String name;
+    String email;
 
     public String getName() {
         return name;
@@ -20,5 +27,5 @@ public class student {
         this.email = email;
     }
 
-    String email;
+
 }
