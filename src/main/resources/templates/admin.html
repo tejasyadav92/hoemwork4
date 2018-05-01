@@ -1,11 +1,11 @@
 <!DOCTYPE HTML>
 <html layout:decorator="layout/layout" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.w3.org/1999/xhtml">
-<body>
+<body class="pt-5" style="background:#b2ad7f">
 <th:block layout:fragment="content">
     <div class="container mt-5">
         <div class="row">
 
-            <div class="col-md-8 col-sm-8 mt-5">
+            <div class="col-md-8 col-md-8 mt-5">
                 <div class="card">
                     <div class="card-header">Student List</div>
                     <div class="card-body">
@@ -17,7 +17,7 @@
                             </tr>
                             </thead>
                             <tbody>
-                            <tr th:each="student : ${student}">
+                            <tr th:each="student : ${students}">
                                 <td th:text="${student.getName()}">Name</td>
                                 <td th:text="${student.getEmail()}">Email</td>
                             </tr>
